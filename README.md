@@ -8,7 +8,7 @@ applications.
 
 1. Use composer to add the package into your project
 using
-`composer require pacuna/schemas:dev-master`
+`composer require jhonn921007/schemas:1.0`
 
 2. Add 'Pacuna\Schemas\SchemasServiceProvider' to your app.php file in the
 services providers section.
