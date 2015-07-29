@@ -1,6 +1,6 @@
 <?php
 
-namespace Pacuna\Schemas\Facades;
+namespace Jhonn921007\Schemas\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
