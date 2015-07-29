@@ -1,5 +1,5 @@
 {
-    "name": "pacuna/schemas",
+    "name": "jhonn921007/schemas",
     "description": "Laravel package for managing postgresql schemas",
     "keywords" : ["laravel", "postgres"],
     "license" : "MIT",
@@ -7,11 +7,13 @@
         {
             "name": "Pablo Acuña",
             "email": "pabloacuna88@gmail.com"
+        },
+        {
+            "name": "Jhonn Rod",
+            "email": ""
         }
     ],
     "require": {
-        "php": ">=5.4.0",
-        "illuminate/support": "5.*"
     },
     "autoload": {
         "psr-0": {
