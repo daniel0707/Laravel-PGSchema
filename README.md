@@ -10,9 +10,9 @@ applications.
 using
 `composer require jhonn921007/schemas:1.0`
 
-2. Add 'Pacuna\Schemas\SchemasServiceProvider' to your app.php file in the
+2. Add 'Jhonn921007\Schemas\SchemasServiceProvider' to your app.php file in the
 services providers section.
-3. Add 'PGSchema' => 'Pacuna\Schemas\Facades\PGSchema' into the aliases
+3. Add 'PGSchema' => 'Jhonn921007\Schemas\Facades\PGSchema' into the aliases
 section
 
 ## Usage
