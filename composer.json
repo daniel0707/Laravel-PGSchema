@@ -17,7 +17,7 @@
     },
     "autoload": {
         "psr-0": {
-            "Pacuna\\Schemas": "src/"
+            "Jhonn921007\\Schemas": "src/"
         }
     },
     "minimum-stability": "stable"
