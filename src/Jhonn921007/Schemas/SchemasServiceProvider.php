@@ -1,6 +1,6 @@
 <?php
 
-namespace Pacuna\Schemas;
+namespace Jhonn921007\Schemas;
 
 use Illuminate\Support\ServiceProvider;
 
