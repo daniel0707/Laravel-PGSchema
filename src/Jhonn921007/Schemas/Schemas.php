@@ -5,6 +5,7 @@ namespace Jhonn921007\Schemas;
 use DB;
 use Artisan;
 use Schema;
+use Illuminate\Support\Facades\App;
 
 /**
  * Class Schemas
@@ -82,9 +83,36 @@ class Schemas
      *
      * @param string $schemaName
      */
-    public function switchTo($schemaName = 'public')
+    public function switchTo($tenantName = 'public')
     {
-        $query = DB::statement('SET search_path TO ' . $schemaName);
+            $driver = 'pgsql';
+          //$tenantName = 'erp';
+          
+          $config = App::make('config');
+     
+          $connections = $config->get('database.connections');
+          //dd($connections);
+          
+          $defaultConnection = $connections[$config->get('database.default')];
+          //dd($defaultConnection);
+          
+          $newConnection = $defaultConnection;
+
+          $newConnection['database'] = 'db';
+          $newConnection['host'] = '172.17.42.1';
+          $newConnection['username'] = 'root';
+          $newConnection['password'] = 'bkAqL9kqcCbyC6r1';
+          $newConnection['schema']   = $tenantName;
+          $newConnection['port']     = '32768';
+          //dd($newConnection);
+          
+          //$data = App::make('config')->set('database.connections.'.$tenantName, $newConnection);
+          DB::disconnect('pgsql');
+          // DB::disconnect('homestead');
+                
+          Config::set('database.connections.'.$driver, $newConnection);
+
+          DB::connection($driver);
     }
 
     /**
